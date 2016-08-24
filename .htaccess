@@ -1,0 +1,26 @@
+﻿DirectoryIndex index.php
+Options -Indexes
+IndexIgnore * 
+
+RedirectMatch 301 /blog(.*) http://localhost/gamificame/$1
+ErrorDocument 403 http://localhost/gamificame/error404.php
+ErrorDocument 404 http://localhost/gamificame/error404.php
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/gif A432000
+ExpiresByType image/jpg A432000
+ExpiresByType image/jpeg A432000
+ExpiresByType image/png A432000
+ExpiresByType image/ico A432000
+ExpiresByType image/bmp A432000
+ExpiresByType text/css A432000
+ExpiresByType text/javascript A432000
+ExpiresByType application/javascript A432000
+ExpiresByType application/x-javascript A432000
+</ifmodule>
+
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
