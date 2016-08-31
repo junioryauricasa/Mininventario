@@ -1,6 +1,9 @@
 <?php
 require_once 'controller/pedido.entidad.php';
 require_once 'model/pedido.model.php';
+require_once 'functionall.php';
+include_once('connection.php');
+include('panelheader.php');
 // Logica
 $per = new Pedido();
 $model = new PedidoModel();
@@ -44,13 +47,6 @@ if(isset($_REQUEST['action']))
 }
 
 include_once('connection.php');
-
-	$servidor = 'localhost';
-	$user = 'root';
-	$pass = '';
-	$name = 'db_tiendastock';
-	conectar($servidor, $user, $pass, $name);
-
 include('panelheader.php');
 ?>
 		

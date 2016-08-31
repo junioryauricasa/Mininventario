@@ -39,7 +39,6 @@ if(isset($_REQUEST['action']))
 			break;
 	}
 }
-
 include('panelheader.php');
 ?>
 		

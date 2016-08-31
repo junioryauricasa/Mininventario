@@ -1,6 +1,9 @@
 <?php
 require_once 'controller/pedido.entidad.php';
 require_once 'model/pedido.model.php';
+require_once 'functionall.php';
+include_once('connection.php');
+include('panelheader.php');
 // Logica
 $per = new Pedido();
 $model = new PedidoModel();
@@ -39,19 +42,9 @@ if(isset($_REQUEST['action']))
 			$per = $model->Obtener($_REQUEST['intidstock']);
 			break;
 	}
-
-
 }
 
-include_once('connection.php');
-	$servidor = 'localhost';
-	$user = 'root';
-	$pass = '';
-	$name = 'db_tiendastock';
-	conectar($servidor, $user, $pass, $name);
 
-
-include('panelheader.php');
 ?>
 		
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
@@ -66,10 +59,9 @@ include('panelheader.php');
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="panel panel-default">
-						<div class="panel-heading">Rol en videojuego</div>
+						<div class="panel-heading">Registro de pedido</div>
 						<div class="panel-body">
 							<div class="col-md-6">
-								<!--form action="registropedido.php" method="post" class="pure-form pure-form-stacked" style="margin-bottom:30px;" enctype="multipart/form-data"-->
 								<form action="?action=<?php echo $per->intidstock > 0 ? 'actualizar' : 'registrar'; ?>" method="post" class="pure-form pure-form-stacked" style="margin-bottom:30px;" enctype="multipart/form-data">
 				                    <input class="form-control" type="hidden" name="intidstock" value="<?php echo $per->__GET('intidstock'); ?>" />
 				                    <label for="">Producto (Cod./Producto/distribuidor)</label>
