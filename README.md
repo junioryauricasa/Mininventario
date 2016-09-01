@@ -1,2 +1,2 @@
 # Mininventario
-ejemplo CRUD de inventario
+<h2> ejemplo CRUD de inventario reporte PDF </h2>
