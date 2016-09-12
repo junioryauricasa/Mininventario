@@ -37,7 +37,8 @@
 		<form role="search">
 			<div class="form-group center" style="text-align:center">
 				<!--input type="text" class="form-control" placeholder="Search"-->
-				<img src="junior.png" alt="" data-toggle='tooltip' data-placement="bottom" title='Junior Yauricasa'>
+				<img src="junior.png" alt="" data-toggle='tooltip' data-placement="bottom" title='Junior Yauricasa' style='width:150px; height: 150px; border-radius:50%'>
+				<br>
 				<!--Usuario-->
 				<div class="fb-follow" style='margin-top:7px'  data-placement="top" data-toggle='tooltip' title='Junior Yauricasa' data-href="https://www.facebook.com/JuniorYauricasa" data-layout="button" data-size="small" data-show-faces="false"></div>
 			</div>
